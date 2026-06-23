@@ -1,0 +1,8 @@
+{
+  "name": "Data Storytelling: Contabilidade Social",
+  "description": "Uma plataforma interativa de data storytelling sobre Contabilidade Social, usando Tableau, uma mascote 3D e explicações guiadas em balões de diálogo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

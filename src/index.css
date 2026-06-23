@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@theme {
+  --font-sans: "Ruda", ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility text-contour {
+  text-shadow: 
+    -2px -2px 0 #4a507a,  
+     2px -2px 0 #4a507a,
+    -2px  2px 0 #4a507a,
+     2px  2px 0 #4a507a,
+    -2px  0px 0 #4a507a,
+     2px  0px 0 #4a507a,
+     0px -2px 0 #4a507a,
+     0px  2px 0 #4a507a,
+     2px  2px 4px rgba(0,0,0,0.3);
+}
+
+@utility text-contour-sm {
+  text-shadow: 
+    -1px -1px 0 #4a507a,  
+     1px -1px 0 #4a507a,
+    -1px  1px 0 #4a507a,
+     1px  1px 0 #4a507a,
+    -1px  0px 0 #4a507a,
+     1px  0px 0 #4a507a,
+     0px -1px 0 #4a507a,
+     0px  1px 0 #4a507a;
+}
+
+/* Configurações responsivas para viewports com espaçamento vertical limitado (viewports de laptop com altura <= 860px) */
+@media (max-height: 860px) {
+  .short-screen-overflow-override {
+    overflow-y: auto !important;
+    height: auto !important;
+    min-height: 100vh;
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .short-screen-overflow-override header {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  /* Layout específico de tela inteira sem rolagem para o Mapa Interativo */
+  .short-screen-interactive-map {
+    height: 100vh !important;
+    overflow: hidden !important;
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .short-screen-interactive-map header {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  /* Página do Mapa Interativo */
+  .short-screen-mascot {
+    max-width: 170px !important;
+    max-height: 170px !important;
+  }
+  
+  .short-screen-dialogue {
+    height: 125px !important;
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .short-screen-layer-row {
+    gap: 0.5rem !important;
+  }
+
+  .short-screen-layer-button {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  /* Página do Glossário */
+  .short-screen-glossary-card {
+    padding: 1.25rem !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .short-screen-glossary-title {
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .short-screen-glossary-gap {
+    gap: 0.5rem !important;
+    flex: 1 1 0% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .short-screen-glossary-button {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    font-size: 0.9rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1 1 0% !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Elementos de jogabilidade ativos do Jogo (estilo de jogo Reigns) */
+  .short-screen-reigns-body {
+    min-height: 360px !important;
+    padding: 1.5rem !important;
+  }
+  
+  .short-screen-reigns-bars {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+  
+  .short-screen-reigns-mascot-frame {
+    width: 75px !important;
+    height: 75px !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Bento Grid / Página Sobre o projeto */
+  .short-screen-bento-mascot {
+    max-width: 280px !important;
+    max-height: 280px !important;
+  }
+  
+  .short-screen-bento-min-h {
+    min-height: 200px !important;
+  }
+
+  /* Comprimindo os tamanhos dos cards para maximizar a segurança vertical e elevar as caixas */
+  .short-screen-interactive-map .bg-\[\#cbd2f5\],
+  .short-screen-interactive-map .bg-\[\#9995ce\],
+  .short-screen-interactive-map .bg-\[\#9ebeb4\]\/70,
+  .short-screen-interactive-map .bg-\[\#9fa2c4\],
+  .short-screen-interactive-map .bg-\[\#b3b7d6\] {
+    padding: 1rem 1.25rem !important;
+    border-radius: 1.5rem !important;
+  }
+
+  .short-screen-interactive-map .min-h-\[120px\] {
+    min-height: 90px !important;
+  }
+
+  .short-screen-interactive-map .min-h-\[320px\] {
+    min-height: 200px !important;
+  }
+
+  /* Comprimir lacunas/gaps dentro dos wrappers de telas curtas (short-screen) */
+  .short-screen-interactive-map > div {
+    gap: 0.5rem !important;
+  }
+}
+
